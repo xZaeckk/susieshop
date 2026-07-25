@@ -1,38 +1,54 @@
-<label>Product</label>
-<input id="product" type="text" readonly>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SusieShop Checkout</title>
 
-<label>Price</label>
-<input id="price" type="text" readonly>
-<div id="confirmPage" style="display:none;">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
 
-    <h2>Confirm Your Purchase</h2>
+<div class="checkout-container">
 
-    <p><strong>Username:</strong> <span id="confirmUsername"></span></p>
+    <h1>Checkout</h1>
 
-    <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+    <label>Minecraft Name</label>
+    <input id="minecraftName" type="text" placeholder="Enter your Minecraft name">
 
-    <p><strong>Platform:</strong> <span id="confirmPlatform"></span></p>
+    <label>Email (Optional)</label>
+    <input id="email" type="email" placeholder="Receipt email">
 
-    <p><strong>Gamemode:</strong> <span id="confirmGamemode"></span></p>
+    <label>Platform</label>
+    <select id="platform">
+        <option>Java Edition</option>
+        <option>Bedrock Edition</option>
+    </select>
 
-    <p><strong>Rank:</strong> <span id="confirmRank"></span></p>
+    <label>Gamemode</label>
+    <select id="gamemode">
+        <option>SusieSMP</option>
+    </select>
 
-    <p><strong>Payment:</strong> <span id="confirmPayment"></span></p>
+    <label>Rank</label>
+    <select id="rank">
+        <option>Kimbab</option>
+        <option>Salmon</option>
+        <option>Susie</option>
+        <option>Wasabi</option>
+    </select>
 
-    <h2 id="confirmPrice">$0.00</h2>
+    <label>Product</label>
+    <input id="product" type="text" readonly>
 
-    <button id="backBtn">← Back</button>
+    <label>Price</label>
+    <input id="price" type="text" readonly>
 
-    <button id="goPayBtn">GO Pay →</button>
+    <button id="submitPurchase">Submit Purchase</button>
 
 </div>
-<button id="submitPurchase">
-    Submit Purchase
-</button>
-<input id="minecraftName" type="text" placeholder="Enter your Minecraft name">
-<input id="email" type="email">
-<select id="platform">
-    <select id="gamemode">
-        <select id="rank">
-            <input id="product" type="text" readonly>
-            <input id="price" type="text" readonly>
+
+<script src="checkout.js"></script>
+
+</body>
+</html>
