@@ -284,3 +284,17 @@ padding:25px;
 }
 
 }
+
+.discord-btn{
+    background:#5865F2;
+    color:white;
+    padding:12px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.discord-btn:hover{
+    background:#4752C4;
+}
