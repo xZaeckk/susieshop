@@ -5,46 +5,245 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SusieShop Checkout</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
 
-<div class="checkout-container">
+<div class="checkout-page">
+
+    <div class="checkout-header">
+
+        <div class="logo">
+            🍣 SusieShop
+        </div>
+
+        <button class="close-btn" onclick="window.location.href='index.html'">
+            ✕
+        </button>
+
+    </div>
 
     <h1>Checkout</h1>
 
-    <label>Minecraft Name</label>
-    <input id="minecraftName" type="text" placeholder="Enter your Minecraft name">
+    <!-- ACCOUNT INFO -->
 
-    <label>Email (Optional)</label>
-    <input id="email" type="email" placeholder="Receipt email">
+    <div class="card">
 
-    <label>Platform</label>
-    <select id="platform">
-        <option>Java Edition</option>
-        <option>Bedrock Edition</option>
-    </select>
+        <h2>👤 Account Info</h2>
 
-    <label>Gamemode</label>
-    <select id="gamemode">
-        <option>SusieSMP</option>
-    </select>
+        <label>Minecraft Name *</label>
 
-    <label>Rank</label>
-    <select id="rank">
-        <option>Kimbab</option>
-        <option>Salmon</option>
-        <option>Susie</option>
-        <option>Wasabi</option>
-    </select>
+        <input
+            id="minecraftName"
+            type="text"
+            placeholder="Enter your Minecraft name">
 
-    <label>Product</label>
-    <input id="product" type="text" readonly>
+        <label>Email (Optional)</label>
 
-    <label>Price</label>
-    <input id="price" type="text" readonly>
+        <input
+            id="email"
+            type="email"
+            placeholder="Receipt email">
 
-    <button id="submitPurchase">Submit Purchase</button>
+    </div>
+
+    <!-- PROMO -->
+
+    <div class="card">
+
+        <h2>🏷 Promo Code</h2>
+
+        <div class="promo-row">
+
+            <input
+                id="promo"
+                type="text"
+                placeholder="Promo code">
+
+            <button id="applyPromo">
+                Apply
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- SERVER -->
+
+    <div class="card">
+
+        <h2>🖥 Server Selection</h2>
+
+        <label>Platform</label>
+
+        <select id="platform">
+
+            <option>Java Edition</option>
+            <option>Bedrock Edition</option>
+
+        </select>
+
+        <label>Gamemode</label>
+
+        <select id="gamemode">
+
+            <option>SusieSMP</option>
+
+        </select>
+
+    </div>
+
+    <!-- RANK -->
+
+    <div class="card">
+
+        <h2>👑 Rank</h2>
+
+        <select id="rank">
+
+            <option>Kimchi</option>
+            <option>Kimbab</option>
+            <option>Salmon</option>
+            <option>Susie</option>
+            <option>Wasabi</option>
+
+        </select>
+
+        <label>Product</label>
+
+        <input
+            id="product"
+            type="text"
+            readonly>
+
+        <label>Price</label>
+
+        <input
+            id="price"
+            type="text"
+            readonly>
+                    <!-- PAYMENT -->
+
+        <div class="card">
+
+            <h2>💳 Payment Method</h2>
+
+            <div class="payment-methods">
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="KHQR"
+                        checked>
+
+                    <span>KHQR</span>
+
+                </label>
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="Credit Card">
+
+                    <span>Credit Card</span>
+
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- TOTAL -->
+
+        <div class="card total-card">
+
+            <h2>Total</h2>
+
+            <h1 id="totalPrice">$0.00</h1>
+
+            <button id="submitPurchase" class="purchase-btn">
+                Submit Purchase
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CONFIRM PURCHASE -->
+
+<div id="confirmPage" class="confirm-page" style="display:none;">
+
+    <div class="confirm-card">
+
+        <h1>Confirm Purchase</h1>
+
+        <p><strong>Minecraft Name:</strong> <span id="confirmUsername"></span></p>
+
+        <p><strong>Email:</strong> <span id="confirmEmail"></span></p>
+
+        <p><strong>Platform:</strong> <span id="confirmPlatform"></span></p>
+
+        <p><strong>Gamemode:</strong> <span id="confirmGamemode"></span></p>
+
+        <p><strong>Rank:</strong> <span id="confirmRank"></span></p>
+
+        <p><strong>Payment:</strong> <span id="confirmPayment"></span></p>
+
+        <h2 id="confirmPrice">$0.00</h2>
+
+        <div class="confirm-buttons">
+
+            <button id="backBtn">
+                ← Back
+            </button>
+
+            <button id="goPayBtn">
+                GO Pay →
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- KHQR MODAL -->
+
+<div id="khqrModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>KHQR Payment</h2>
+
+        <img
+            src="images/khqr.png"
+            alt="KHQR"
+            class="qr-image">
+
+        <h1 id="modalPrice">$0.00</h1>
+
+        <p>Scan this QR code using your banking app.</p>
+
+        <div id="countdown">
+            10:00
+        </div>
+
+        <button id="paidBtn" class="paid-btn">
+            I've Paid
+        </button>
+
+    </div>
 
 </div>
 
