@@ -77,3 +77,40 @@ Your order has been submitted.`
     closePopup();
 
 });
+const modal=document.getElementById("khqrModal");
+const khqr=document.getElementById("khqrBtn");
+const close=document.querySelector(".close");
+
+khqr.onclick=function(){
+
+const price=document.getElementById("price").value;
+
+document.getElementById("modalPrice").innerHTML=price;
+
+modal.style.display="flex";
+
+}
+
+close.onclick=function(){
+
+modal.style.display="none";
+
+}
+
+window.onclick=function(e){
+
+if(e.target==modal){
+
+modal.style.display="none";
+
+}
+
+}
+
+document.getElementById("paidBtn").onclick=function(){
+
+alert("Thank you! Your payment is being verified.");
+
+modal.style.display="none";
+
+}
