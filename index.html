@@ -1,238 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SusieShop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SusieShop</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins,sans-serif;
-}
-
-body{
-background:#fff7fa;
-}
-
-header{
-background:#ff4d88;
-color:white;
-padding:20px;
-text-align:center;
-font-size:30px;
-font-weight:bold;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-border-radius:15px;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
-padding:20px;
-text-align:center;
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card img{
-width:120px;
-height:120px;
-object-fit:contain;
-}
-
-.card h2{
-margin-top:15px;
-}
-
-.price{
-color:#ff4d88;
-font-size:28px;
-font-weight:bold;
-margin:15px 0;
-}
-
-button{
-background:#ff4d88;
-color:white;
-border:none;
-padding:12px 25px;
-border-radius:8px;
-cursor:pointer;
-font-size:17px;
-}
-
-button:hover{
-background:#e63b76;
-}
-
-.popup{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,.6);
-display:none;
-justify-content:center;
-align-items:center;
-}
-
-.checkout{
-background:white;
-width:420px;
-padding:30px;
-border-radius:15px;
-}
-
-.checkout h2{
-margin-bottom:20px;
-text-align:center;
-}
-
-input,select{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:8px;
-}
-
-.payments{
-display:flex;
-gap:10px;
-margin-bottom:20px;
-}
-
-.payments button{
-flex:1;
-background:#eee;
-color:black;
-}
-
-.buy{
-width:100%;
-background:#ff4d88;
-color:white;
-}
-
-.close{
-float:right;
-cursor:pointer;
-font-size:22px;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
+
+<div class="logo">
 🍣 SusieShop
+</div>
+
+<nav>
+
+<a href="#rank">Ranks</a>
+<a href="#items">Items</a>
+<a href="#">Discord</a>
+
+</nav>
+
 </header>
 
-<div class="container">
+<section class="hero">
 
-<div class="grid">
+<h1>Welcome to SusieShop</h1>
 
-<div class="card">
-<img src="https://minecraft.wiki/images/Mace_JE1_BE1.png" alt="">
-<h2>Legendary Mace</h2>
-<p>Fire Aspect II<br>Sharpness V<br>Mending</p>
-<div class="price">$5.00</div>
-<button onclick="buy('Legendary Mace','$5.00')">Buy Now</button>
-</div>
+<p>Purchase Ranks, Kits, Pets and More!</p>
 
-<div class="card">
-<img src="https://minecraft.wiki/images/Allay_JE2_BE2.png" alt="">
-<h2>Allay Pet</h2>
-<p>Speed<br>Regeneration</p>
-<div class="price">$5.00</div>
-<button onclick="buy('Allay Pet','$5.00')">Buy Now</button>
-</div>
+</section>
+
+<!-- RANKS -->
+
+<section id="rank">
+
+<h2>Rank in SusieSMP</h2>
+
+<div class="products">
 
 <div class="card">
-<img src="https://minecraft.wiki/images/Vex_JE2_BE2.png" alt="">
-<h2>Vex Pet</h2>
-<p>Speed<br>Regeneration</p>
-<div class="price">$2.00</div>
-<button onclick="buy('Vex Pet','$2.00')">Buy Now</button>
+
+<img src="images/kimchi.png">
+
+<h3>Kimchi</h3>
+
+<h4>$5.00</h4>
+
+<ul>
+<li>Land Chunk 8</li>
+<li>Land Member 15</li>
+<li>Set Home 4</li>
+</ul>
+
+<button onclick="buyRank('Kimchi','$5.00')">
+Buy Now
+</button>
+
 </div>
+
+<div class="card">
+
+<img src="images/kimbab.png">
+
+<h3>Kimbab</h3>
+
+<h4>$10.00</h4>
+
+<ul>
+<li>Land Chunk 10</li>
+<li>Land Member 15</li>
+<li>Set Home 6</li>
+</ul>
+
+<button onclick="buyRank('Kimbab','$10.00')">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="images/salmon.png">
+
+<h3>Salmon</h3>
+
+<h4>$15.00</h4>
+
+<ul>
+<li>Land Chunk 14</li>
+<li>Land Member 20</li>
+<li>Set Home 8</li>
+</ul>
+
+<button onclick="buyRank('Salmon','$15.00')">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="images/susie.png">
+
+<h3>Susie</h3>
+
+<h4>$20.00</h4>
+
+<ul>
+<li>Land Chunk 20</li>
+<li>Land Member 20</li>
+<li>Set Home 10</li>
+</ul>
+
+<button onclick="buyRank('Susie','$20.00')">
+Buy Now
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="images/wasabi.png">
+
+<h3>Wasabi</h3>
+
+<h4>$30.00</h4>
+
+<ul>
+<li>Land Chunk 25</li>
+<li>Land Member 25</li>
+<li>Set Home 15</li>
+</ul>
+
+<button onclick="buyRank('Wasabi','$30.00')">
+Buy Now
+</button>
 
 </div>
 
 </div>
+
+</section>
+
+<!-- ITEMS -->
+
+<section id="items">
+
+<h2>Items</h2>
+
+<div class="products">
+
+<div class="card">
+
+<img src="images/mace.png">
+
+<h3>Legendary Mace</h3>
+
+<h4>$5.00</h4>
+
+<button onclick="buyItem('Legendary Mace','$5.00')">
+Buy
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="images/allay.png">
+
+<h3>Allay Pet</h3>
+
+<h4>$5.00</h4>
+
+<button onclick="buyItem('Allay Pet','$5.00')">
+Buy
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="images/vex.png">
+
+<h3>Vex Pet</h3>
+
+<h4>$2.00</h4>
+
+<button onclick="buyItem('Vex Pet','$2.00')">
+Buy
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CHECKOUT -->
 
 <div class="popup" id="popup">
 
 <div class="checkout">
 
-<span class="close" onclick="closePopup()">✖</span>
+<span class="close" onclick="closePopup()">×</span>
 
 <h2>Checkout</h2>
 
-<input placeholder="Minecraft Name">
+<label>Minecraft Name</label>
+<input type="text" placeholder="Enter your Minecraft name">
 
-<input placeholder="Email (Optional)">
+<label>Email (Optional)</label>
+<input type="email" placeholder="Receipt email">
 
-<input placeholder="Promo Code">
+<label>Promo Code</label>
+<input type="text" placeholder="Promo code">
+
+<label>Platform</label>
 
 <select>
+
 <option>Java Edition</option>
 <option>Bedrock</option>
+
 </select>
 
+<label>Gamemode</label>
+
 <select>
-<option>Survival</option>
-<option>Skyblock</option>
+
+<option>SusieSMP</option>
+
 </select>
+
+<label>Rank</label>
+
+<select id="rankSelect">
+
+<option>Kimchi</option>
+<option>Kimbab</option>
+<option>Salmon</option>
+<option>Susie</option>
+<option>Wasabi</option>
+
+</select>
+
+<label>Product</label>
 
 <input id="product" readonly>
 
+<label>Price</label>
+
 <input id="price" readonly>
 
-<div class="payments">
+<div class="payment">
+
 <button>KHQR</button>
+
 <button>Credit Card</button>
-</div>
-
-<button class="buy">Complete Purchase</button>
 
 </div>
 
+<button class="purchase">
+Complete Purchase
+</button>
+
 </div>
 
-<script>
+</div>
 
-function buy(item,price){
-document.getElementById("popup").style.display="flex";
-document.getElementById("product").value=item;
-document.getElementById("price").value=price;
-}
-
-function closePopup(){
-document.getElementById("popup").style.display="none";
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
