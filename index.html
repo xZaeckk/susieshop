@@ -10,47 +10,38 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
 
-<div class="logo">
-🍣 SusieShop
-</div>
+    <div class="logo">
+        🍣 SusieShop
+    </div>
 
-<nav>
+    <nav>
+        <a href="#ranks">Ranks</a>
+        <a href="#items">Items</a>
 
-<a href="#rank">Ranks</a>
-<a href="#items">Items</a>
-<a class="discord-btn"
-   href="https://discord.gg/ZfPUbMuUPW"
-   target="_blank">
-   Join Discord
-</a>
-
-</nav>
+        <a class="discord-btn"
+           href="https://discord.gg/ZfPUbMuUPW"
+           target="_blank">
+            Join Discord
+        </a>
+    </nav>
 
 </header>
 
 <section class="hero">
 
-<h1>Welcome to SusieShop</h1>
+    <h1>Welcome to SusieShop</h1>
 
-<p>Purchase Ranks, Kits, Pets and More!</p>
+    <p>Purchase Ranks, Kits, Pets and More!</p>
 
 </section>
 
-<!-- RANKS -->
+<section id="ranks">
 
-<select id="rank">
-    <option>Kimbab</option>
-    <option>Salmon</option>
-    <option>Susie</option>
-    <option>Wasabi</option>
-</select>
-
-id="rank"
+<h2>Ranks</h2>
 
 <div class="products">
 
@@ -69,7 +60,7 @@ id="rank"
 </ul>
 
 <button class="buy-btn" onclick="buyRank('Kimchi',5)">
-    Buy Now
+Buy Now
 </button>
 
 </div>
@@ -89,8 +80,9 @@ id="rank"
 </ul>
 
 <button class="buy-btn" onclick="buyRank('Kimbab',10)">
-    Buy Now
+Buy Now
 </button>
+
 </div>
 
 <div class="card">
@@ -108,7 +100,7 @@ id="rank"
 </ul>
 
 <button class="buy-btn" onclick="buyRank('Salmon',15)">
-    Buy Now
+Buy Now
 </button>
 
 </div>
@@ -128,7 +120,7 @@ id="rank"
 </ul>
 
 <button class="buy-btn" onclick="buyRank('Susie',20)">
-    Buy Now
+Buy Now
 </button>
 
 </div>
@@ -148,7 +140,7 @@ id="rank"
 </ul>
 
 <button class="buy-btn" onclick="buyRank('Wasabi',30)">
-    Buy Now
+Buy Now
 </button>
 
 </div>
@@ -156,8 +148,6 @@ id="rank"
 </div>
 
 </section>
-
-<!-- ITEMS -->
 
 <section id="items">
 
@@ -173,9 +163,7 @@ id="rank"
 
 <h4>$5.00</h4>
 
-<button onclick="buyItem('Legendary Mace','$5.00')">
-Buy
-</button>
+<button>Buy</button>
 
 </div>
 
@@ -187,9 +175,7 @@ Buy
 
 <h4>$5.00</h4>
 
-<button onclick="buyItem('Allay Pet','$5.00')">
-Buy
-</button>
+<button>Buy</button>
 
 </div>
 
@@ -201,9 +187,7 @@ Buy
 
 <h4>$2.00</h4>
 
-<button onclick="buyItem('Vex Pet','$2.00')">
-Buy
-</button>
+<button>Buy</button>
 
 </div>
 
@@ -211,99 +195,7 @@ Buy
 
 </section>
 
-<!-- CHECKOUT -->
-
-<div class="popup" id="popup">
-
-<div class="checkout">
-
-<span class="close" onclick="closePopup()">×</span>
-
-<h2>Checkout</h2>
-
-<label>Minecraft Name</label>
-<input type="text" placeholder="Enter your Minecraft name">
-
-<label>Email (Optional)</label>
-<input type="email" placeholder="Receipt email">
-
-<label>Promo Code</label>
-<input type="text" placeholder="Promo code">
-
-<label>Platform</label>
-
-<select>
-
-<option>Java Edition</option>
-<option>Bedrock</option>
-
-</select>
-
-<label>Gamemode</label>
-
-<select>
-
-<option>SusieSMP</option>
-
-</select>
-
-<label>Rank</label>
-
-<select id="rankSelect">
-
-<option>Kimchi</option>
-<option>Kimbab</option>
-<option>Salmon</option>
-<option>Susie</option>
-<option>Wasabi</option>
-
-</select>
-
-<label>Product</label>
-
-<input id="product" readonly>
-
-<label>Price</label>
-
-<input id="price" readonly>
-
-<div class="payment">
-
-<button id="khqrBtn" class="khqr-btn">
-    KHQR
-</button>
-
-<button>Credit Card</button>
-
-</div>
-
-<button class="purchase">
-Complete Purchase
-</button>
-
-</div>
-
-</div>
-
 <script src="script.js"></script>
 
 </body>
 </html>
-<!-- KHQR Payment Modal -->
-<div id="khqrModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-
-    <h2>Complete Payment</h2>
-
-    <img src="images/khqr.png" alt="KHQR" class="qr-image">
-
-    <h3 id="modalPrice">$30.00</h3>
-
-    <p>Scan the QR code with your banking app.</p>
-
-    <button id="paidBtn" class="paid-btn">
-      I Have Paid
-    </button>
-  </div>
-</div>
