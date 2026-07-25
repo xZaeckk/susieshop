@@ -114,3 +114,11 @@ alert("Thank you! Your payment is being verified.");
 modal.style.display="none";
 
 }
+function buyRank(rank, price) {
+
+    localStorage.setItem("rank", rank);
+    localStorage.setItem("price", price);
+
+    window.location.href = "checkout.html";
+
+}
