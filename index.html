@@ -1,65 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SusieShop</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<title>SusieShop</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 </head>
+
 <body>
 
 <header>
 
-    <div class="logo">
-        🍣 SusieShop
-    </div>
+<div class="logo">
 
-    <nav>
-        <a href="#ranks">Ranks</a>
-        <a href="#items">Items</a>
+<img src="images/logo.png">
 
-        <a class="discord-btn"
-           href="https://discord.gg/ZfPUbMuUPW"
-           target="_blank">
-            Join Discord
-        </a>
-    </nav>
+<div>
+
+<h1>SusieShop</h1>
+
+<p>Purchase Ranks, Kits, Pets and More!</p>
+
+</div>
+
+</div>
+
+<nav>
+
+<a class="active" href="#">Home</a>
+<a href="#ranks">Ranks</a>
+<a href="#items">Items</a>
+<a href="#about">About</a>
+
+<a class="discord"
+href="https://discord.gg/ZfPUbMuUPW"
+target="_blank">
+
+<i class="fab fa-discord"></i>
+
+Discord
+
+</a>
+
+</nav>
 
 </header>
 
 <section class="hero">
 
-    <h1>Welcome to SusieShop</h1>
+<img src="images/banner.jpg">
 
-    <p>Purchase Ranks, Kits, Pets and More!</p>
+<div class="hero-text">
+
+<h2>Welcome to SusieShop</h2>
+
+<p>
+
+❤ Purchase Ranks, Kits, Pets and More! ❤
+
+</p>
+
+</div>
 
 </section>
 
 <section id="ranks">
 
-<h2>Ranks</h2>
+<h2>
 
-<div class="products">
+💎 RANKS
 
+</h2>
+
+<div class="cards">
 <div class="card">
 
 <img src="images/kimchi.png">
 
-<h3>Kimchi</h3>
+<h3>Kimchi Kit</h3>
 
 <h4>$5.00</h4>
 
 <ul>
-<li>Land Chunk 8</li>
-<li>Land Member 15</li>
-<li>Set Home 4</li>
+<li>✔ Land Chunk 8</li>
+<li>✔ Land Member 15</li>
+<li>✔ Set Home 4</li>
 </ul>
 
-<button class="buy-btn" onclick="buyRank('Kimchi',5)">
+<button onclick="buyRank('Kimchi',5)">
+<i class="fa-solid fa-cart-shopping"></i>
 Buy Now
 </button>
 
@@ -69,17 +110,18 @@ Buy Now
 
 <img src="images/kimbab.png">
 
-<h3>Kimbab</h3>
+<h3>Kimbab Kit</h3>
 
 <h4>$10.00</h4>
 
 <ul>
-<li>Land Chunk 10</li>
-<li>Land Member 15</li>
-<li>Set Home 6</li>
+<li>✔ Land Chunk 10</li>
+<li>✔ Land Member 15</li>
+<li>✔ Set Home 6</li>
 </ul>
 
-<button class="buy-btn" onclick="buyRank('Kimbab',10)">
+<button onclick="buyRank('Kimbab',10)">
+<i class="fa-solid fa-cart-shopping"></i>
 Buy Now
 </button>
 
@@ -89,17 +131,18 @@ Buy Now
 
 <img src="images/salmon.png">
 
-<h3>Salmon</h3>
+<h3>Salmon Kit</h3>
 
 <h4>$15.00</h4>
 
 <ul>
-<li>Land Chunk 14</li>
-<li>Land Member 20</li>
-<li>Set Home 8</li>
+<li>✔ Land Chunk 14</li>
+<li>✔ Land Member 20</li>
+<li>✔ Set Home 8</li>
 </ul>
 
-<button class="buy-btn" onclick="buyRank('Salmon',15)">
+<button onclick="buyRank('Salmon',15)">
+<i class="fa-solid fa-cart-shopping"></i>
 Buy Now
 </button>
 
@@ -109,17 +152,18 @@ Buy Now
 
 <img src="images/susie.png">
 
-<h3>Susie</h3>
+<h3>Susie Kit</h3>
 
 <h4>$20.00</h4>
 
 <ul>
-<li>Land Chunk 20</li>
-<li>Land Member 20</li>
-<li>Set Home 10</li>
+<li>✔ Land Chunk 20</li>
+<li>✔ Land Member 20</li>
+<li>✔ Set Home 10</li>
 </ul>
 
-<button class="buy-btn" onclick="buyRank('Susie',20)">
+<button onclick="buyRank('Susie',20)">
+<i class="fa-solid fa-cart-shopping"></i>
 Buy Now
 </button>
 
@@ -129,17 +173,18 @@ Buy Now
 
 <img src="images/wasabi.png">
 
-<h3>Wasabi</h3>
+<h3>Wasabi Kit</h3>
 
 <h4>$30.00</h4>
 
 <ul>
-<li>Land Chunk 25</li>
-<li>Land Member 25</li>
-<li>Set Home 15</li>
+<li>✔ Land Chunk 25</li>
+<li>✔ Land Member 25</li>
+<li>✔ Set Home 15</li>
 </ul>
 
-<button class="buy-btn" onclick="buyRank('Wasabi',30)">
+<button onclick="buyRank('Wasabi',30)">
+<i class="fa-solid fa-cart-shopping"></i>
 Buy Now
 </button>
 
@@ -151,10 +196,13 @@ Buy Now
 
 <section id="items">
 
-<h2>Items</h2>
+<h2>🎁 ITEMS</h2>
 
-<div class="products">
+<div class="cards">
+<script src="script.js"></script>
 
+</body>
+</html>
 <div class="card">
 
 <img src="images/mace.png">
@@ -163,7 +211,10 @@ Buy Now
 
 <h4>$5.00</h4>
 
-<button>Buy</button>
+<button onclick="buyItem('Legendary Mace',5)">
+<i class="fa-solid fa-cart-shopping"></i>
+Buy
+</button>
 
 </div>
 
@@ -175,7 +226,10 @@ Buy Now
 
 <h4>$5.00</h4>
 
-<button>Buy</button>
+<button onclick="buyItem('Allay Pet',5)">
+<i class="fa-solid fa-cart-shopping"></i>
+Buy
+</button>
 
 </div>
 
@@ -187,13 +241,99 @@ Buy Now
 
 <h4>$2.00</h4>
 
-<button>Buy</button>
+<button onclick="buyItem('Vex Pet',2)">
+<i class="fa-solid fa-cart-shopping"></i>
+Buy
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="images/crate.png">
+
+<h3>Mystery Crate</h3>
+
+<h4>$3.00</h4>
+
+<button onclick="buyItem('Mystery Crate',3)">
+<i class="fa-solid fa-cart-shopping"></i>
+Buy
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="images/xp.png">
+
+<h3>XP Booster</h3>
+
+<h4>$2.00</h4>
+
+<button onclick="buyItem('XP Booster',2)">
+<i class="fa-solid fa-cart-shopping"></i>
+Buy
+</button>
 
 </div>
 
 </div>
 
 </section>
+
+<section id="about">
+
+<h2>About SusieShop</h2>
+
+<p>
+
+Purchase Minecraft ranks, pets, crates and items securely using KHQR or Credit Card.
+
+</p>
+
+</section>
+<footer>
+
+<div class="footer-content">
+
+<div>
+
+<h3>🍣 SusieShop</h3>
+
+<p>
+The best Minecraft store for SusieSMP.
+</p>
+
+</div>
+
+<div>
+
+<h3>Quick Links</h3>
+
+<a href="#ranks">Ranks</a><br>
+<a href="#items">Items</a><br>
+<a href="checkout.html">Checkout</a>
+
+</div>
+
+<div>
+
+<h3>Community</h3>
+
+<a href="https://discord.gg/ZfPUbMuUPW" target="_blank">
+Discord
+</a>
+
+</div>
+
+</div>
+
+<p class="copyright">
+© 2026 SusieShop. All rights reserved.
+</p>
+
+</footer>
 
 <script src="script.js"></script>
 
