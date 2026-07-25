@@ -5,52 +5,16 @@ window.onload = function () {
 
     if (rank) {
 
-        const rankSelect = document.getElementById("rank");
-        if (rankSelect) rankSelect.value = rank;
-
-        const product = document.getElementById("product");
-        if (product) product.value = rank + " Rank";
-
-        const priceBox = document.getElementById("price");
-        if (priceBox) priceBox.value = "$" + Number(price).toFixed(2);
+        document.getElementById("rank").value = rank;
+        document.getElementById("product").value = rank + " Rank";
+        document.getElementById("price").value = "$" + Number(price).toFixed(2);
 
     }
 
-}
-const submitBtn = document.getElementById("submitPurchase");
+};
 
-if (submitBtn) {
+document.getElementById("submitPurchase").onclick = function () {
 
-    submitBtn.addEventListener("click", function () {
+    alert("Step 1 Complete!\n\nNext we'll build the Confirm Purchase page.");
 
-        // Hide checkout form
-        document.getElementById("checkoutForm").style.display = "none";
-
-        // Show confirmation page
-        document.getElementById("confirmPage").style.display = "block";
-
-        // Copy information
-        document.getElementById("confirmUsername").textContent =
-            document.getElementById("minecraftName").value;
-
-        document.getElementById("confirmEmail").textContent =
-            document.getElementById("email").value;
-
-        document.getElementById("confirmPlatform").textContent =
-            document.getElementById("platform").value;
-
-        document.getElementById("confirmGamemode").textContent =
-            document.getElementById("gamemode").value;
-
-        document.getElementById("confirmRank").textContent =
-            document.getElementById("rank").value;
-
-        document.getElementById("confirmPayment").textContent =
-            document.querySelector("input[name='payment']:checked").value;
-
-        document.getElementById("confirmPrice").textContent =
-            document.getElementById("price").value;
-
-    });
-
-}
+};
