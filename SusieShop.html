@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SusieShop</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#fff7fa;
+}
+
+header{
+background:#ff4d88;
+color:white;
+padding:20px;
+text-align:center;
+font-size:30px;
+font-weight:bold;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+padding:20px;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:120px;
+height:120px;
+object-fit:contain;
+}
+
+.card h2{
+margin-top:15px;
+}
+
+.price{
+color:#ff4d88;
+font-size:28px;
+font-weight:bold;
+margin:15px 0;
+}
+
+button{
+background:#ff4d88;
+color:white;
+border:none;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+font-size:17px;
+}
+
+button:hover{
+background:#e63b76;
+}
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.6);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+.checkout{
+background:white;
+width:420px;
+padding:30px;
+border-radius:15px;
+}
+
+.checkout h2{
+margin-bottom:20px;
+text-align:center;
+}
+
+input,select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:8px;
+}
+
+.payments{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.payments button{
+flex:1;
+background:#eee;
+color:black;
+}
+
+.buy{
+width:100%;
+background:#ff4d88;
+color:white;
+}
+
+.close{
+float:right;
+cursor:pointer;
+font-size:22px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+🍣 SusieShop
+</header>
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<img src="https://minecraft.wiki/images/Mace_JE1_BE1.png" alt="">
+<h2>Legendary Mace</h2>
+<p>Fire Aspect II<br>Sharpness V<br>Mending</p>
+<div class="price">$5.00</div>
+<button onclick="buy('Legendary Mace','$5.00')">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://minecraft.wiki/images/Allay_JE2_BE2.png" alt="">
+<h2>Allay Pet</h2>
+<p>Speed<br>Regeneration</p>
+<div class="price">$5.00</div>
+<button onclick="buy('Allay Pet','$5.00')">Buy Now</button>
+</div>
+
+<div class="card">
+<img src="https://minecraft.wiki/images/Vex_JE2_BE2.png" alt="">
+<h2>Vex Pet</h2>
+<p>Speed<br>Regeneration</p>
+<div class="price">$2.00</div>
+<button onclick="buy('Vex Pet','$2.00')">Buy Now</button>
+</div>
+
+</div>
+
+</div>
+
+<div class="popup" id="popup">
+
+<div class="checkout">
+
+<span class="close" onclick="closePopup()">✖</span>
+
+<h2>Checkout</h2>
+
+<input placeholder="Minecraft Name">
+
+<input placeholder="Email (Optional)">
+
+<input placeholder="Promo Code">
+
+<select>
+<option>Java Edition</option>
+<option>Bedrock</option>
+</select>
+
+<select>
+<option>Survival</option>
+<option>Skyblock</option>
+</select>
+
+<input id="product" readonly>
+
+<input id="price" readonly>
+
+<div class="payments">
+<button>KHQR</button>
+<button>Credit Card</button>
+</div>
+
+<button class="buy">Complete Purchase</button>
+
+</div>
+
+</div>
+
+<script>
+
+function buy(item,price){
+document.getElementById("popup").style.display="flex";
+document.getElementById("product").value=item;
+document.getElementById("price").value=price;
+}
+
+function closePopup(){
+document.getElementById("popup").style.display="none";
+}
+
+</script>
+
+</body>
+</html>
