@@ -14,7 +14,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
@@ -22,44 +23,284 @@
 
 <div class="checkout-page">
 
-<div class="checkout-header">
+<header class="checkout-header">
 
-<h1>
-<i class="fa-solid fa-cart-shopping"></i>
-Checkout
-</h1>
+<div class="logo">
+
+🍣 <span>SusieShop</span>
+
+</div>
 
 <a href="index.html" class="close-btn">
+
 <i class="fa-solid fa-xmark"></i>
+
 </a>
 
-</div>
+</header>
 
-<div class="steps">
+<h1>Checkout</h1>
 
-<div class="step active">
+<div class="checkout-grid">
+
+<div class="left">
+
+<!-- ACCOUNT -->
+
+<div class="card">
+
+<h2>
+
 <i class="fa-solid fa-user"></i>
-<p>1. Info</p>
+
+Account Information
+
+</h2>
+
+<label>Minecraft Username</label>
+
+<input
+id="minecraftName"
+type="text"
+placeholder="Enter username">
+
+<label>Email (Optional)</label>
+
+<input
+id="email"
+type="email"
+placeholder="Enter email">
+
 </div>
 
-<div class="step">
+<!-- PROMO -->
+
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-ticket"></i>
+
+Promo Code
+
+</h2>
+
+<div class="promo-row">
+
+<input
+id="promo"
+type="text"
+placeholder="Promo Code">
+
+<button>
+
+Apply
+
+</button>
+
+</div>
+
+</div>
+
+<!-- SERVER -->
+
+<div class="card">
+
+<h2>
+
 <i class="fa-solid fa-server"></i>
-<p>2. Server</p>
+
+Server Selection
+
+</h2>
+
+<label>Platform</label>
+
+<select id="platform">
+
+<option>Java Edition</option>
+
+<option>Bedrock Edition</option>
+
+</select>
+
+<label>Gamemode</label>
+
+<select id="gamemode">
+
+<option>SusieSMP</option>
+
+</select>
+
+<label>Rank</label>
+
+<select id="rank">
+
+<option>Kimchi</option>
+
+<option>Kimbab</option>
+
+<option>Salmon</option>
+
+<option>Susie</option>
+
+<option>Wasabi</option>
+
+</select>
+
+<label>Product</label>
+
+<input
+id="product"
+readonly>
+
+<label>Price</label>
+
+<input
+id="price"
+readonly>
+
 </div>
 
-<div class="step">
-<i class="fa-solid fa-crown"></i>
-<p>3. Rank</p>
 </div>
 
-<div class="step">
+<div class="right">
+
+<div class="card total-card">
+
+<h2>Order Summary</h2>
+
+<p id="summaryProduct">
+
+Kimchi Rank
+
+</p>
+
+<h1 id="totalPrice">
+
+$5.00
+
+</h1>
+<button
+id="submitPurchase"
+class="purchase-btn">
+
+Continue to Payment
+
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>
+
 <i class="fa-solid fa-credit-card"></i>
-<p>4. Payment</p>
+
+Payment Method
+
+</h2>
+
+<div class="payment-grid">
+
+<label class="payment-box">
+
+<input
+type="radio"
+name="payment"
+value="KHQR"
+checked>
+
+<img
+src="khqr.jpg"
+class="payment-logo">
+
+<h3>KHQR</h3>
+
+<p>Scan & Pay</p>
+
+</label>
+
+<label class="payment-box">
+
+<input
+type="radio"
+name="payment"
+value="Credit Card">
+
+<i class="fa-solid fa-credit-card payment-icon"></i>
+
+<h3>Credit Card</h3>
+
+<p>Visa / Mastercard</p>
+
+</label>
+
+</div>
+
 </div>
 
 </div>
 
 </div>
+
+<!-- KHQR POPUP -->
+
+<div
+id="khqrModal"
+class="modal">
+
+<div class="modal-content">
+
+<span
+class="close">
+
+&times;
+
+</span>
+
+<h2>
+
+KHQR Payment
+
+</h2>
+
+<img
+src="khqr.jpg"
+class="qr-image"
+alt="KHQR">
+
+<h1 id="modalPrice">
+
+$5.00
+
+</h1>
+
+<p>
+
+Scan this QR using your banking app.
+
+</p>
+
+<div id="countdown">
+
+10:00
+
+</div>
+
+<button
+id="paidBtn"
+class="paid-btn">
+
+I've Paid
+
+</button>
+
+</div>
+
+</div>
+
+<script src="checkout.js"></script>
 
 </body>
 
