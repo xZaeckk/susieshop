@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SusieShop</title>
 
+<link rel="stylesheet" href="style.css">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -40,13 +41,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 <nav>
 
 <a class="active" href="#">Home</a>
-<a href="#ranks">Ranks</a>
-<a href="#items">Items</a>
-<a href="#about">About</a>
 
-<a class="discord"
-href="https://discord.gg/ZfPUbMuUPW"
-target="_blank">
+<a href="#ranks">Ranks</a>
+
+<a href="#items">Items</a>
+
+<a href="#">About</a>
+
+<a class="discord" href="https://discord.gg/ZfPUbMuUPW">
 
 <i class="fab fa-discord"></i>
 
@@ -60,19 +62,7 @@ Discord
 
 <section class="hero">
 
-<img src="images/banner.jpg">
-
-<div class="hero-text">
-
-<h2>Welcome to SusieShop</h2>
-
-<p>
-
-❤ Purchase Ranks, Kits, Pets and More! ❤
-
-</p>
-
-</div>
+<img src="images/hero.png">
 
 </section>
 
@@ -80,16 +70,16 @@ Discord
 
 <h2>
 
-💎 RANKS
+⭐ RANKS
 
 </h2>
 
-<div class="cards">
+<div class="products">
 <div class="card">
 
 <img src="images/kimchi.png">
 
-<h3>Kimchi Kit</h3>
+<h3>KIMCHI KIT</h3>
 
 <h4>$5.00</h4>
 
@@ -100,7 +90,6 @@ Discord
 </ul>
 
 <button onclick="buyRank('Kimchi',5)">
-<i class="fa-solid fa-cart-shopping"></i>
 Buy Now
 </button>
 
@@ -110,7 +99,7 @@ Buy Now
 
 <img src="images/kimbab.png">
 
-<h3>Kimbab Kit</h3>
+<h3>KIMBAB KIT</h3>
 
 <h4>$10.00</h4>
 
@@ -121,7 +110,6 @@ Buy Now
 </ul>
 
 <button onclick="buyRank('Kimbab',10)">
-<i class="fa-solid fa-cart-shopping"></i>
 Buy Now
 </button>
 
@@ -131,7 +119,7 @@ Buy Now
 
 <img src="images/salmon.png">
 
-<h3>Salmon Kit</h3>
+<h3>SALMON KIT</h3>
 
 <h4>$15.00</h4>
 
@@ -142,7 +130,6 @@ Buy Now
 </ul>
 
 <button onclick="buyRank('Salmon',15)">
-<i class="fa-solid fa-cart-shopping"></i>
 Buy Now
 </button>
 
@@ -152,7 +139,7 @@ Buy Now
 
 <img src="images/susie.png">
 
-<h3>Susie Kit</h3>
+<h3>SUSIE KIT</h3>
 
 <h4>$20.00</h4>
 
@@ -163,7 +150,6 @@ Buy Now
 </ul>
 
 <button onclick="buyRank('Susie',20)">
-<i class="fa-solid fa-cart-shopping"></i>
 Buy Now
 </button>
 
@@ -173,7 +159,7 @@ Buy Now
 
 <img src="images/wasabi.png">
 
-<h3>Wasabi Kit</h3>
+<h3>WASABI KIT</h3>
 
 <h4>$30.00</h4>
 
@@ -184,25 +170,22 @@ Buy Now
 </ul>
 
 <button onclick="buyRank('Wasabi',30)">
-<i class="fa-solid fa-cart-shopping"></i>
 Buy Now
 </button>
 
 </div>
 
 </div>
-
-</section>
-
 <section id="items">
 
-<h2>🎁 ITEMS</h2>
+<h2>
 
-<div class="cards">
-<script src="script.js"></script>
+💎 ITEMS
 
-</body>
-</html>
+</h2>
+
+<div class="products">
+
 <div class="card">
 
 <img src="images/mace.png">
@@ -212,7 +195,6 @@ Buy Now
 <h4>$5.00</h4>
 
 <button onclick="buyItem('Legendary Mace',5)">
-<i class="fa-solid fa-cart-shopping"></i>
 Buy
 </button>
 
@@ -227,7 +209,6 @@ Buy
 <h4>$5.00</h4>
 
 <button onclick="buyItem('Allay Pet',5)">
-<i class="fa-solid fa-cart-shopping"></i>
 Buy
 </button>
 
@@ -242,7 +223,6 @@ Buy
 <h4>$2.00</h4>
 
 <button onclick="buyItem('Vex Pet',2)">
-<i class="fa-solid fa-cart-shopping"></i>
 Buy
 </button>
 
@@ -257,7 +237,6 @@ Buy
 <h4>$3.00</h4>
 
 <button onclick="buyItem('Mystery Crate',3)">
-<i class="fa-solid fa-cart-shopping"></i>
 Buy
 </button>
 
@@ -272,7 +251,6 @@ Buy
 <h4>$2.00</h4>
 
 <button onclick="buyItem('XP Booster',2)">
-<i class="fa-solid fa-cart-shopping"></i>
 Buy
 </button>
 
@@ -282,60 +260,36 @@ Buy
 
 </section>
 
-<section id="about">
-
-<h2>About SusieShop</h2>
-
-<p>
-
-Purchase Minecraft ranks, pets, crates and items securely using KHQR or Credit Card.
-
-</p>
-
-</section>
 <footer>
 
-<div class="footer-content">
-
 <div>
 
-<h3>🍣 SusieShop</h3>
-
-<p>
-The best Minecraft store for SusieSMP.
-</p>
+🍣 SusieShop
 
 </div>
 
 <div>
 
-<h3>Quick Links</h3>
-
-<a href="#ranks">Ranks</a><br>
-<a href="#items">Items</a><br>
-<a href="checkout.html">Checkout</a>
+🛡 Secure Payments
 
 </div>
 
 <div>
 
-<h3>Community</h3>
-
-<a href="https://discord.gg/ZfPUbMuUPW" target="_blank">
-Discord
-</a>
+⚡ Instant Delivery
 
 </div>
 
-</div>
+<div>
 
-<p class="copyright">
-© 2026 SusieShop. All rights reserved.
-</p>
+💬 Join our Discord
+
+</div>
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
