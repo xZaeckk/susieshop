@@ -1,21 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SusieShop Checkout</title>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="checkout.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
 
 <body>
 
-<h1>Checkout Page</h1>
+<div class="checkout-page">
 
-<p>Your checkout will go here.</p>
+<div class="checkout-header">
 
-<script src="script.js"></script>
+<div class="logo">
+
+<h1>🍣 SusieShop</h1>
+
+<p>Purchase Ranks, Kits & Items</p>
+
+</div>
+
+<a href="index.html" class="close-btn">
+
+<i class="fa-solid fa-xmark"></i>
+
+</a>
+
+</div>
+
+<h1>Checkout</h1>
+
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-user"></i>
+
+Account Information
+
+</h2>
+
+<label>
+
+Minecraft Name
+
+</label>
+
+<input
+type="text"
+id="minecraftName"
+placeholder="Enter your Minecraft name">
+
+<label>
+
+Email (Optional)
+
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email">
+
+</div>
+
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-tag"></i>
+
+Promo Code
+
+</h2>
+
+<div class="promo-row">
+
+<input
+type="text"
+id="promo"
+placeholder="Enter promo code">
+
+<button>
+
+Apply
+
+</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-server"></i>
+
+Server
+
+</h2>
+
+<select id="platform">
+
+<option>
+
+Java Edition
+
+</option>
+
+<option>
+
+Bedrock Edition
+
+</option>
+
+</select>
+
+<label>
+
+Gamemode
+
+</label>
+
+<select id="gamemode">
+
+<option>
+
+SusieSMP
+
+</option>
+
+</select>
+
+<label>
+
+Rank
+
+</label>
+
+<select id="rank">
+
+<option>Kimchi</option>
+
+<option>Kimbab</option>
+
+<option>Salmon</option>
+
+<option>Susie</option>
+
+<option>Wasabi</option>
+
+</select>
+
+<label>
+
+Product
+
+</label>
+
+<input
+id="product"
+readonly>
+
+<label>
+
+Price
+
+</label>
+
+<input
+id="price"
+readonly>
+
+</div>
+<div class="card">
+
+<h2>
+
+<i class="fa-solid fa-credit-card"></i>
+
+Payment Method
+
+</h2>
+
+<div class="payment-grid">
+
+<label class="payment-box">
+
+<input
+type="radio"
+name="payment"
+value="KHQR"
+checked>
+
+<img
+src="khqr.jpg"
+class="payment-logo">
+
+<h3>KHQR</h3>
+
+<p>Scan & Pay</p>
+
+</label>
+
+<label class="payment-box">
+
+<input
+type="radio"
+name="payment"
+value="Credit Card">
+
+<i class="fa-solid fa-credit-card payment-icon"></i>
+
+<h3>Credit Card</h3>
+
+<p>Visa / Mastercard</p>
+
+</label>
+
+</div>
+
+</div>
+
+<div class="card total-card">
+
+<div class="total-row">
+
+<span>Product</span>
+
+<strong id="totalProduct">
+
+Kimchi Rank
+
+</strong>
+
+</div>
+
+<div class="total-row">
+
+<span>Total</span>
+
+<h1 id="totalPrice">
+
+$5.00
+
+</h1>
+
+</div>
+
+<button
+id="submitPurchase"
+class="purchase-btn">
+
+Continue to Payment
+
+</button>
+
+</div>
+
+</div>
+
+<!-- KHQR MODAL -->
+
+<div
+id="khqrModal"
+class="modal">
+
+<div class="modal-content">
+
+<span
+class="close">
+
+&times;
+
+</span>
+
+<h2>
+
+KHQR Payment
+
+</h2>
+
+<img
+src="khqr.jpg"
+alt="KHQR"
+class="qr-image">
+
+<h1 id="modalPrice">
+
+$5.00
+
+</h1>
+
+<p>
+
+Scan this QR code using your banking app.
+
+</p>
+
+<div id="countdown">
+
+10:00
+
+</div>
+
+<button
+id="paidBtn"
+class="paid-btn">
+
+I've Paid
+
+</button>
+
+</div>
+
+</div>
+
+<script src="checkout.js"></script>
 
 </body>
+
 </html>
